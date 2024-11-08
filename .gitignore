@@ -1,0 +1,13 @@
+[Bb]in/
+[Oo]bj/
+
+[Dd]ebug/
+[Rr]elease/
+
+# NuGet packages.
+packages/*
+!packages/repositories.config
+
+# User-specific files.
+*.suo
+*.user

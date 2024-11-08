@@ -1,0 +1,4 @@
+* text=auto eol=lf
+
+# This must be set as `CRLF`.
+*.sln text eol=crlf
