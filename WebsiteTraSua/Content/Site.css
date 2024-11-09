@@ -1,0 +1,248 @@
+:root {
+    --primary: #FF6B6B;
+    --secondary: #4ECDC4;
+    --accent: #FFE66D;
+    --accent-light: #FFF9E6;
+    --text: #2C3E50;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--accent-light);
+}
+
+/* Cart preview hover effect */
+.cart-wrapper {
+    position: relative;
+}
+
+.cart-preview {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 320px;
+    background: white;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    display: none;
+    z-index: 1000;
+    border: 2px solid var(--accent);
+}
+
+.cart-wrapper:hover .cart-preview {
+    display: block;
+}
+
+/* Navbar adjustments */
+.navbar {
+    background-color: white !important;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+    padding: 0.5rem 0;
+}
+
+.nav-item {
+    margin: 0 0.25rem;
+}
+
+.nav-link {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.4rem 1rem !important;
+    border-radius: 2rem !important;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--primary) !important;
+    background-color: var(--accent-light);
+    border-radius: 0.5rem;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 80%;
+}
+
+.navbar-brand {
+    padding: 0;
+    line-height: 1.2;
+}
+
+.navbar .btn-link {
+    padding: 0.4rem;
+}
+
+.navbar .fs-4 {
+    font-size: 1.2rem !important;
+}
+
+/* Hero section enhancement */
+.hero-section {
+    background: linear-gradient(135deg, var(--accent-light) 0%, white 100%);
+}
+
+.hero-section .display-4 {
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.card {
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15) !important;
+}
+
+/* Footer redesign */
+.footer {
+    background: linear-gradient(135deg, white 0%, var(--accent-light) 100%);
+    padding: 4rem 0 2rem;
+    color: var(--text);
+}
+
+.footer h4, .footer h5 {
+    color: var(--primary);
+}
+
+.footer p {
+    color: var(--text);
+    opacity: 0.8;
+}
+
+.footer .social-links a {
+    color: var(--primary);
+    transition: color 0.3s ease;
+}
+
+.footer .social-links a:hover {
+    color: var(--secondary);
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    color: var(--text);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-links a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--accent);
+    border-radius: 2rem;
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
+.footer-links a:hover {
+    color: var(--primary);
+    transform: translateX(10px);
+}
+
+.footer-links a:hover::before {
+    width: 100%;
+}
+
+.footer-contact i {
+    color: var(--primary);
+}
+
+.footer-contact span {
+    color: var(--text);
+    opacity: 0.8;
+}
+
+.footer-contact li {
+    display: flex;
+    align-items: center;
+}
+
+.footer-contact li i {
+    font-size: 1.2rem;
+}
+
+.footer-contact li span {
+    font-size: 1rem;
+}
+
+.footer .text-center p {
+    color: var(--text);
+    opacity: 0.8;
+    margin-top: 2rem;
+}
+
+.social-links a:hover {
+    color: var(--secondary) !important;
+}
+
+.badge {
+    background-color: var(--secondary) !important;
+}
+
+/* About page styles */
+.about-hero-section {
+    background: linear-gradient(135deg, var(--accent-light) 0%, white 100%);
+    padding: 4rem 0;
+}
+
+.value-card {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.12);
+}
+
+.mission-list {
+    list-style: none;
+    padding: 0;
+}
+
+.mission-list li {
+    font-size: 1.1rem;
+    color: var(--text);
+}
+
+.mission-list i {
+    font-size: 1.4rem;
+}

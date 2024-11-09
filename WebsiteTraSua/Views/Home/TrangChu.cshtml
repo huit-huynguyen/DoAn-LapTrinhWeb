@@ -1,0 +1,66 @@
+@using WebsiteTraSua.Models
+
+@{
+    ViewBag.Title = "Trang Chủ";
+}
+
+<!-- Hero Section -->
+<section class="hero-section py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold text-primary mb-3">Khám phá hương vị<br>trà sữa tuyệt vời</h1>
+                <p class="lead mb-4">Thưởng thức những ly trà sữa thơm ngon, được pha chế từ nguyên liệu tươi sạch và công thức độc đáo.</p>
+                @Html.ActionLink("Xem Menu", "DanhMuc", null, new { @class = "btn btn-primary btn-lg" })
+            </div>
+            <div class="col-lg-6 d-none d-lg-block">
+                <img src="~/Content/images/trangchu-hero.jpg" class="img-fluid rounded-4 shadow">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Product Section -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-4" style="color: var(--primary)">Sản Phẩm Yêu Thích</h2>
+        <div class="row g-4">
+            <!-- Product Card Template -->
+            @foreach (var thucUong in new ThucUong[] {
+                new ThucUong {
+                    Ten = "Trà Sữa Truyền Thống",
+                    Gia = 59000M,
+                    HinhAnh = "tra-sua-truyen-thong.jpg",
+                    MoTa = "Trà đen đặc trưng kết hợp với sữa tươi và trân châu mật ong",
+                },
+                new ThucUong {
+                    Ten = "Giấc Mơ Khoai Môn",
+                    Gia = 64000M,
+                    HinhAnh = "tra-sua-khoai-mon.jpg",
+                    MoTa = "Hỗn hợp khoai môn mịn màng với sữa dừa và trân châu gạo tím",
+                },
+                new ThucUong {
+                    Ten = "Thiên Đường Matcha",
+                    HinhAnh = "tra-sua-tra-xanh.jpg",
+                    Gia = 69000M,
+                    MoTa = "Matcha Nhật Bản cao cấp với sữa yến mạch và trân châu đường nâu",
+                },
+            })
+            {
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm rounded-4 border-0">
+                        <img src="~/Content/images/@thucUong.HinhAnh" class="card-img-top" alt="@thucUong.Ten">
+                        <div class="card-body">
+                            <h3 class="h5 fw-bold" style="color: var(--primary)">@thucUong.Ten</h3>
+                            <p class="text-secondary">@thucUong.MoTa</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 mb-0" style="color: var(--secondary)">@thucUong.Gia.ToString("#,###")₫</span>
+                                <button class="btn btn-primary rounded-pill px-4">Thêm vào giỏ</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

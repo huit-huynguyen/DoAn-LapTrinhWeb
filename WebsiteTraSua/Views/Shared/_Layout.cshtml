@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Nhóm 11</title>
+
+    <!-- Stylesheets -->
+    <link href="~/Vendors/bootstrap-5.3.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Vendors/bootstrap-icons-1.11.3/bootstrap-icons.min.css" rel="stylesheet">
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <!-- Header Navigation -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand fs-3" href="@Url.Action("TrangChu")">
+                <span class="d-block fw-bold" style="color: var(--primary)">Web trà sữa</span>
+                <span class="fs-6 text-secondary">Nhóm 11</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navContent">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        @Html.ActionLink("Menu", "DanhMuc", null, new { @class = "nav-link text-center fw-medium" })
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("Về chúng tôi", "ThongTin", null, new { @class = "nav-link text-center fw-medium" })
+                    </li>
+                </ul>
+                <div class="d-flex gap-3 align-items-center">
+                    <button class="btn btn-link">
+                        <i class="bi bi-person fs-4"></i>
+                    </button>
+                    <div class="cart-wrapper">
+                        <button class="btn btn-link position-relative">
+                            <i class="bi bi-bag fs-4"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">0</span>
+                        </button>
+                        <div class="cart-preview">
+                            <h6 class="fw-bold mb-3">Giỏ hàng</h6>
+                            <div class="preview-items">
+                                <!-- Dynamic cart items here -->
+                            </div>
+                            @Html.ActionLink("Thanh toán", "ThanhToanGioHang", null, new { @class = "btn btn-primary w-100 mt-3" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    @RenderBody()
+
+    <!-- Footer -->
+    <footer class="footer mt-5 py-5">
+        <div class="container">
+            <!-- Company Info -->
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h4 class="text-primary fw-bold">Web trà sữa</h4>
+                    <p class="text-secondary">Chúng tôi mang đến những ly trà sữa thơm ngon, chất lượng với nguyên liệu tươi sạch và công thức độc đáo.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-primary fs-4"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-primary fs-4"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-primary fs-4"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <!-- Site Map -->
+                <div class="col-lg-4">
+                    <h5 class="mb-4 fw-bold" style="color: var(--primary)">Sơ đồ website</h5>
+                    <ul class="footer-links">
+                        <li>
+                            @Html.ActionLink("Menu", "DanhMuc", null, new { @class = "fw-medium" })
+                        </li>
+                        <li>
+                            @Html.ActionLink("Về chúng tôi", "ThongTin", null, new { @class = "fw-medium" })
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-lg-4">
+                    <h5 class="mb-4 fw-bold" style="color: var(--primary)">Liên hệ</h5>
+                    <ul class="footer-contact list-unstyled">
+                        <li class="mb-3">
+                            <i class="bi bi-geo-alt text-primary me-2"></i>
+                            <span class="text-secondary">140 Lê Trọng Tấn, Phường Tây Thạnh, Quận Tân Phú, TP.HCM</span>
+                        </li>
+                        <li class="mb-3">
+                            <i class="bi bi-telephone text-primary me-2"></i>
+                            <span class="text-secondary">0283 8163 318</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="~/Vendors/bootstrap-5.3.3/js/bootstrap.bundle.min.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

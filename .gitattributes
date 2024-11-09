@@ -2,3 +2,21 @@
 
 # This must be set as `CRLF`.
 *.sln text eol=crlf
+*.csproj text eol=crlf
+
+#
+# Vendor files
+#
+
+WebsiteTraSua/Vendors linguist-vendored=true
+
+#
+# Binary files
+#
+
+*.png binary
+*.jpg binary
+*.gif binary
+
+*.woff binary
+*.woff2 binary
