@@ -118,8 +118,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\images\ca-phe-cappuccino.jpg" />
+    <Content Include="Content\images\ca-phe-den.jpg" />
+    <Content Include="Content\images\ca-phe-latte.jpg" />
+    <Content Include="Content\images\ca-phe-mocha.jpg" />
+    <Content Include="Content\images\ca-phe-sua.jpg" />
+    <Content Include="Content\images\da-xay-caramel.jpg" />
+    <Content Include="Content\images\da-xay-cookie.jpg" />
+    <Content Include="Content\images\da-xay-dau.jpg" />
+    <Content Include="Content\images\da-xay-matcha.jpg" />
+    <Content Include="Content\images\da-xay-socola.jpg" />
+    <Content Include="Content\images\hong-tra-chanh.jpg" />
+    <Content Include="Content\images\hong-tra-dao.jpg" />
+    <Content Include="Content\images\hong-tra-den.jpg" />
+    <Content Include="Content\images\hong-tra-oolong.jpg" />
+    <Content Include="Content\images\hong-tra-vai.jpg" />
+    <Content Include="Content\images\tra-sua-dau.jpg" />
     <Content Include="Content\images\tra-sua-khoai-mon.jpg" />
-    <Content Include="Content\images\tra-sua-tra-xanh.jpg" />
+    <Content Include="Content\images\tra-sua-socola.jpg" />
+    <Content Include="Content\images\tra-sua-matcha.jpg" />
     <Content Include="Content\images\tra-sua-truyen-thong.jpg" />
     <Content Include="Content\images\trangchu-hero.jpg" />
     <Content Include="Content\Site.css" />
@@ -196,6 +213,7 @@
     <Content Include="Vendors\bootstrap-icons-1.11.3\fonts\bootstrap-icons.woff2" />
     <Content Include="Views\Home\TrangChu.cshtml" />
     <Content Include="Views\Home\ThongTin.cshtml" />
+    <Content Include="Views\Home\DanhMuc.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

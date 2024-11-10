@@ -1,0 +1,174 @@
+@using WebsiteTraSua.Models
+
+@{
+    ViewBag.Title = "Menu";
+}
+
+<!-- Menu Section -->
+<section class="py-5">
+    <div class="container">
+        <!-- Search & Filter -->
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="Tìm kiếm đồ uống...">
+            </div>
+            <div class="col-md-6">
+                <select class="form-select">
+                    <option value="">Tất cả danh mục</option>
+                    <option value="trasua">Trà sữa</option>
+                    <option value="tra">Trà</option>
+                    <option value="cafe">Cà phê</option>
+                    <option value="daxay">Đá xay</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Menu Grid -->
+        <div class="row g-4">
+            @foreach (var drink in new ThucUong[] {
+                // Trà sữa
+                new ThucUong {
+                    Ten = "Trà Sữa Truyền Thống",
+                    Gia = 45000M,
+                    HinhAnh = "tra-sua-truyen-thong.jpg",
+                    MoTa = "Trà đen đặc trưng kết hợp với sữa tươi và trân châu mật ong",
+                },
+                new ThucUong {
+                    Ten = "Trà Sữa Matcha",
+                    Gia = 55000M,
+                    HinhAnh = "tra-sua-matcha.jpg",
+                    MoTa = "Matcha Nhật Bản cao cấp với sữa tươi và trân châu đường nâu",
+                },
+                new ThucUong {
+                    Ten = "Trà Sữa Khoai Môn",
+                    Gia = 55000M,
+                    HinhAnh = "tra-sua-khoai-mon.jpg",
+                    MoTa = "Hỗn hợp khoai môn mịn màng với sữa dừa và trân châu gạo tím",
+                },
+                new ThucUong {
+                    Ten = "Trà Sữa Socola",
+                    Gia = 50000M,
+                    HinhAnh = "tra-sua-socola.jpg",
+                    MoTa = "Socola Bỉ thượng hạng kết hợp với sữa tươi và trân châu socola",
+                },
+                new ThucUong {
+                    Ten = "Trà Sữa Dâu",
+                    Gia = 50000M,
+                    HinhAnh = "tra-sua-dau.jpg",
+                    MoTa = "Dâu tây tươi xay với sữa tươi và trân châu dâu",
+                },
+
+                // Hồng trà
+                new ThucUong {
+                    Ten = "Hồng Trà Đen",
+                    Gia = 35000M,
+                    HinhAnh = "hong-tra-den.jpg",
+                    MoTa = "Hồng trà đen Ceylon thượng hạng kết hợp với mật ong",
+                },
+                new ThucUong {
+                    Ten = "Hồng Trà Oolong",
+                    Gia = 40000M,
+                    HinhAnh = "hong-tra-oolong.jpg",
+                    MoTa = "Hồng trà Oolong Đài Loan với tinh thể mật ong",
+                },
+                new ThucUong {
+                    Ten = "Hồng Trà Đào",
+                    Gia = 45000M,
+                    HinhAnh = "hong-tra-dao.jpg",
+                    MoTa = "Hồng trà đào tươi với lát đào và trân châu trắng",
+                },
+                new ThucUong {
+                    Ten = "Hồng Trà Vải",
+                    Gia = 45000M,
+                    HinhAnh = "hong-tra-vai.jpg",
+                    MoTa = "Hồng trà vải tươi với vải nguyên trái và thạch",
+                },
+                new ThucUong {
+                    Ten = "Hồng Trà Chanh",
+                    Gia = 35000M,
+                    HinhAnh = "hong-tra-chanh.jpg",
+                    MoTa = "Hồng trà tươi với chanh và mật ong",
+                },
+
+                // Cà phê
+                new ThucUong {
+                    Ten = "Cà Phê Đen",
+                    Gia = 35000M,
+                    HinhAnh = "ca-phe-den.jpg",
+                    MoTa = "Cà phê Việt Nam rang xay nguyên chất",
+                },
+                new ThucUong {
+                    Ten = "Cà Phê Sữa",
+                    Gia = 40000M,
+                    HinhAnh = "ca-phe-sua.jpg",
+                    MoTa = "Cà phê Việt Nam với sữa đặc thơm béo",
+                },
+                new ThucUong {
+                    Ten = "Cà Phê Cappuccino",
+                    Gia = 55000M,
+                    HinhAnh = "ca-phe-cappuccino.jpg",
+                    MoTa = "Espresso với bọt sữa nóng và bột cacao phủ",
+                },
+                new ThucUong {
+                    Ten = "Cà Phê Latte",
+                    Gia = 55000M,
+                    HinhAnh = "ca-phe-latte.jpg",
+                    MoTa = "Espresso với sữa nóng và lớp bọt nhẹ",
+                },
+                new ThucUong {
+                    Ten = "Cà Phê Mocha",
+                    Gia = 60000M,
+                    HinhAnh = "ca-phe-mocha.jpg",
+                    MoTa = "Espresso với socola, sữa nóng và kem tươi",
+                },
+
+                // Đá xay
+                new ThucUong {
+                    Ten = "Matcha Đá Xay",
+                    Gia = 60000M,
+                    HinhAnh = "da-xay-matcha.jpg",
+                    MoTa = "Matcha Nhật Bản đá xay với kem tươi phủ",
+                },
+                new ThucUong {
+                    Ten = "Socola Đá Xay",
+                    Gia = 60000M,
+                    HinhAnh = "da-xay-socola.jpg",
+                    MoTa = "Socola Bỉ đá xay với kem tươi phủ",
+                },
+                new ThucUong {
+                    Ten = "Cookie Đá Xay",
+                    Gia = 65000M,
+                    HinhAnh = "da-xay-cookie.jpg",
+                    MoTa = "Bánh cookies nghiền đá xay với kem tươi phủ",
+                },
+                new ThucUong {
+                    Ten = "Caramel Đá Xay",
+                    Gia = 65000M,
+                    HinhAnh = "da-xay-caramel.jpg",
+                    MoTa = "Caramel thơm béo đá xay với kem tươi phủ",
+                },
+                new ThucUong {
+                    Ten = "Dâu Đá Xay",
+                    Gia = 60000M,
+                    HinhAnh = "da-xay-dau.jpg",
+                    MoTa = "Dâu tây tươi đá xay với kem tươi phủ",
+                }
+            })
+            {
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm rounded-4 border-0">
+                        <img src="~/Content/images/@drink.HinhAnh" class="card-img-top" alt="@drink.Ten">
+                        <div class="card-body">
+                            <h3 class="h5 fw-bold" style="color: var(--primary)">@drink.Ten</h3>
+                            <p class="text-secondary">@drink.MoTa</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 mb-0" style="color: var(--secondary)">@drink.Gia.ToString("#,###")₫</span>
+                                <button class="btn btn-primary rounded-pill px-4">Thêm vào giỏ</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
