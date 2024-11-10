@@ -1,13 +1,14 @@
 @using WebsiteTraSua.Models
 
 @{
+    Layout = "~/Views/Home/_Layout.cshtml";
     ViewBag.Title = "Menu";
 }
 
 <!-- Menu Section -->
 <section class="py-5">
     <div class="container">
-        <!-- Search & Filter -->
+        <!-- Search & Filter Controls -->
         <div class="row mb-4">
             <div class="col-md-6">
                 <input type="text" class="form-control" placeholder="Tìm kiếm đồ uống...">
@@ -23,7 +24,7 @@
             </div>
         </div>
 
-        <!-- Menu Grid -->
+        <!-- Product Grid -->
         <div class="row g-4">
             @foreach (var drink in new ThucUong[] {
                 // Trà sữa
@@ -162,7 +163,9 @@
                             <h3 class="h5 fw-bold" style="color: var(--primary)">@drink.Ten</h3>
                             <p class="text-secondary">@drink.MoTa</p>
                             <div class="d-flex justify-content-between align-items-center">
-                                <span class="h5 mb-0" style="color: var(--secondary)">@drink.Gia.ToString("#,###")₫</span>
+                                <span class="h5 mb-0" style="color: var(--secondary)">
+                                    @drink.Gia.ToString("#,###")₫
+                                </span>
                                 <button class="btn btn-primary rounded-pill px-4">Thêm vào giỏ</button>
                             </div>
                         </div>

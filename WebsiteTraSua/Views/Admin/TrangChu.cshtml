@@ -1,0 +1,150 @@
+@{
+    Layout = "~/Views/Admin/_Layout.cshtml";
+    ViewBag.Title = "Dashboard";
+}
+
+<!-- Stats Overview -->
+<div class="row g-4 mb-4">
+    <div class="col-md-6 col-lg-3">
+        <div class="card border-0 shadow-sm">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start">
+                    <div>
+                        <h6 class="text-muted mb-2">Tổng doanh thu</h6>
+                        <h4 class="mb-0">15.2M VND</h4>
+                        <small class="text-success">+12% so với tháng trước</small>
+                    </div>
+                    <div class="bg-primary bg-opacity-10 rounded-circle p-3">
+                        <i class="bi bi-currency-dollar text-primary fs-4"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+        <div class="card border-0 shadow-sm">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start">
+                    <div>
+                        <h6 class="text-muted mb-2">Đơn hàng mới</h6>
+                        <h4 class="mb-0">42</h4>
+                        <small class="text-success">+8% so với tuần trước</small>
+                    </div>
+                    <div class="bg-secondary bg-opacity-10 rounded-circle p-3">
+                        <i class="bi bi-cart text-secondary fs-4"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+        <div class="card border-0 shadow-sm">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start">
+                    <div>
+                        <h6 class="text-muted mb-2">Khách hàng mới</h6>
+                        <h4 class="mb-0">128</h4>
+                        <small class="text-success">+23% so với tháng trước</small>
+                    </div>
+                    <div class="bg-success bg-opacity-10 rounded-circle p-3">
+                        <i class="bi bi-people text-success fs-4"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+        <div class="card border-0 shadow-sm">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start">
+                    <div>
+                        <h6 class="text-muted mb-2">Sản phẩm</h6>
+                        <h4 class="mb-0">25</h4>
+                        <small class="text-primary">4 sản phẩm mới</small>
+                    </div>
+                    <div class="bg-accent bg-opacity-10 rounded-circle p-3">
+                        <i class="bi bi-box text-accent fs-4"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Recent Orders -->
+<div class="card border-0 shadow-sm mb-4">
+    <div class="card-header bg-white border-0 py-3">
+        <h5 class="mb-0">Đơn Hàng Gần Đây</h5>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-hover align-middle mb-0">
+            <thead class="table-light">
+                <tr>
+                    <th>Mã đơn</th>
+                    <th>Khách hàng</th>
+                    <th>Sản phẩm</th>
+                    <th>Tổng tiền</th>
+                    <th>Trạng thái</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#ORD-2024</td>
+                    <td>Nguyễn Văn A</td>
+                    <td>Trà sữa truyền thống (x2)</td>
+                    <td>98.000đ</td>
+                    <td><span class="badge bg-success">Hoàn thành</span></td>
+                    <td><button class="btn btn-sm btn-light"><i class="bi bi-three-dots"></i></button></td>
+                </tr>
+                <tr>
+                    <td>#ORD-2023</td>
+                    <td>Trần Thị B</td>
+                    <td>Trà sữa matcha (x1)</td>
+                    <td>45.000đ</td>
+                    <td><span class="badge bg-warning">Đang giao</span></td>
+                    <td><button class="btn btn-sm btn-light"><i class="bi bi-three-dots"></i></button></td>
+                </tr>
+                <tr>
+                    <td>#ORD-2022</td>
+                    <td>Lê Văn C</td>
+                    <td>Trà đào (x3)</td>
+                    <td>135.000đ</td>
+                    <td><span class="badge bg-primary">Mới</span></td>
+                    <td><button class="btn btn-sm btn-light"><i class="bi bi-three-dots"></i></button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Quick Actions -->
+<div class="row g-4">
+    <div class="col-md-6">
+        <div class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+                <h5 class="card-title">Thao tác nhanh</h5>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary"><i class="bi bi-plus-circle me-2"></i>Thêm sản phẩm mới</button>
+                    <button class="btn btn-outline-primary"><i class="bi bi-file-earmark-text me-2"></i>Xuất báo cáo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+                <h5 class="card-title">Thông báo hệ thống</h5>
+                <div class="list-group list-group-flush">
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h6 class="mb-1">Cập nhật hệ thống</h6>
+                            <small class="text-muted">3 giờ trước</small>
+                        </div>
+                        <p class="mb-1">Hệ thống sẽ bảo trì vào 23:00 tối nay</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

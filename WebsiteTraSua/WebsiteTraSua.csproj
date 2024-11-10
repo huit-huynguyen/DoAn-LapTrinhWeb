@@ -172,6 +172,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -204,9 +205,8 @@
     <Content Include="Vendors\bootstrap-5.3.3\js\bootstrap.esm.min.js.map" />
     <Content Include="Vendors\bootstrap-5.3.3\js\bootstrap.js.map" />
     <Content Include="Vendors\bootstrap-5.3.3\js\bootstrap.min.js.map" />
-    <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\_Layout.cshtml" />
     <Content Include="Vendors\bootstrap-icons-1.11.3\bootstrap-icons.json" />
     <Content Include="Vendors\bootstrap-icons-1.11.3\bootstrap-icons.scss" />
     <Content Include="Vendors\bootstrap-icons-1.11.3\fonts\bootstrap-icons.woff" />
@@ -214,6 +214,8 @@
     <Content Include="Views\Home\TrangChu.cshtml" />
     <Content Include="Views\Home\ThongTin.cshtml" />
     <Content Include="Views\Home\DanhMuc.cshtml" />
+    <Content Include="Views\Admin\TrangChu.cshtml" />
+    <Content Include="Views\Admin\_Layout.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

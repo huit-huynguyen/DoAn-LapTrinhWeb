@@ -11,16 +11,21 @@
     @Styles.Render("~/Content/css")
 </head>
 <body>
-    <!-- Header Navigation -->
+    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
+            <!-- Brand -->
             <a class="navbar-brand fs-3" href="@Url.Action("TrangChu")">
-                <span class="d-block fw-bold" style="color: var(--primary)">Web trà sữa</span>
+                <span class="d-block fw-bold" style="color: var(--primary)">Trà Sữa</span>
                 <span class="fs-6 text-secondary">Nhóm 11</span>
             </a>
+
+            <!-- Toggle Button -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
+            <!-- Navigation Links -->
             <div class="collapse navbar-collapse" id="navContent">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
@@ -30,10 +35,22 @@
                         @Html.ActionLink("Về chúng tôi", "ThongTin", null, new { @class = "nav-link text-center fw-medium" })
                     </li>
                 </ul>
+
+                <!-- User Controls -->
                 <div class="d-flex gap-3 align-items-center">
-                    <button class="btn btn-link">
-                        <i class="bi bi-person fs-4"></i>
-                    </button>
+                    <!-- User Menu -->
+                    <div class="dropdown">
+                        <button class="btn btn-link p-0" data-bs-toggle="dropdown">
+                            <i class="bi bi-person-circle fs-4"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-person"></i> Profile</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Shopping Cart -->
                     <div class="cart-wrapper">
                         <button class="btn btn-link position-relative">
                             <i class="bi bi-bag fs-4"></i>
@@ -53,12 +70,14 @@
     </nav>
 
     <!-- Main Content -->
-    @RenderBody()
+    <div class="container py-4">
+        @RenderBody()
+    </div>
 
     <!-- Footer -->
     <footer class="footer mt-5 py-5">
         <div class="container">
-            <!-- Company Info -->
+            <!-- Brand Info -->
             <div class="row g-4">
                 <div class="col-lg-4">
                     <h4 class="text-primary fw-bold">Web trà sữa</h4>
@@ -70,7 +89,7 @@
                     </div>
                 </div>
 
-                <!-- Site Map -->
+                <!-- Site Links -->
                 <div class="col-lg-4">
                     <h5 class="mb-4 fw-bold" style="color: var(--primary)">Sơ đồ website</h5>
                     <ul class="footer-links">

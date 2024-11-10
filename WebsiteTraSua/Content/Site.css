@@ -1,17 +1,114 @@
+/********************
+ * Global Variables *
+ ********************/
+
 :root {
     --primary: #FF6B6B;
     --secondary: #4ECDC4;
     --accent: #FFE66D;
     --accent-light: #FFF9E6;
     --text: #2C3E50;
+    --text-muted: #6c757d;
+    --border-color: rgba(0,0,0,.1);
+    --shadow-sm: 0 0.5rem 1rem rgba(0,0,0,0.15);
+    --shadow-lg: 0 1rem 2rem rgba(0,0,0,0.12);
 }
 
+/*****************
+ * Shared Styles *
+ *****************/
+
+/* Base */
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--accent-light);
+    min-height: 100vh;
 }
 
-/* Cart preview hover effect */
+/* Cards */
+.card {
+    border: 0;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-sm);
+}
+
+.card-header {
+    background: transparent;
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 1.5rem;
+}
+
+/* Navigation */
+.navbar {
+    background-color: white !important;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+    padding: 0.5rem 0;
+}
+
+.navbar-brand {
+    padding: 0;
+    line-height: 1.2;
+}
+
+.navbar-nav {
+    gap: 0.75rem;
+}
+
+.nav-item {
+    margin: 0 0.75rem;
+}
+
+.nav-link {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.4rem 1rem !important;
+    border-radius: 2rem !important;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary) !important;
+    background-color: var(--accent-light);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Dropdowns */
+.dropdown-menu {
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    padding: 0.5rem 0;
+}
+
+.dropdown-item {
+    padding: 0.5rem 1rem;
+    transition: all 0.2s ease;
+}
+
+.dropdown-item i {
+    margin-right: 0.5rem;
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
+
+/* Utilities */
+.text-muted {
+    color: var(--text-muted) !important;
+}
+
+.badge {
+    background-color: var(--secondary) !important;
+}
+
+/****************
+ * Client Theme *
+ ****************/
+
+/* Cart Preview */
 .cart-wrapper {
     position: relative;
 }
@@ -22,7 +119,7 @@ body {
     top: 100%;
     width: 320px;
     background: white;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    box-shadow: var(--shadow-sm);
     border-radius: 0.5rem;
     padding: 1rem;
     display: none;
@@ -34,107 +131,12 @@ body {
     display: block;
 }
 
-/* Navbar adjustments */
-.navbar {
-    background-color: white !important;
-    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-    padding: 0.5rem 0;
-}
-
-.nav-item {
-    margin: 0 0.25rem;
-}
-
-.nav-link {
-    font-size: 1.2rem;
-    font-weight: 600;
-    padding: 0.4rem 1rem !important;
-    border-radius: 2rem !important;
-    transition: all 0.3s ease;
-    position: relative;
-}
-
-.nav-link:hover {
-    color: var(--primary) !important;
-    background-color: var(--accent-light);
-    border-radius: 0.5rem;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0;
-    height: 2px;
-    background: var(--primary);
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
-}
-
-.nav-link:hover::after {
-    width: 80%;
-}
-
-.navbar-brand {
-    padding: 0;
-    line-height: 1.2;
-}
-
-.navbar .btn-link {
-    padding: 0.4rem;
-}
-
-.navbar .fs-4 {
-    font-size: 1.2rem !important;
-}
-
-/* Hero section enhancement */
-.hero-section {
-    background: linear-gradient(135deg, var(--accent-light) 0%, white 100%);
-}
-
-.hero-section .display-4 {
-    background: linear-gradient(45deg, var(--primary), var(--secondary));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.card {
-    transition: transform 0.2s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15) !important;
-}
-
-/* Footer redesign */
+/* Client Footer */
 .footer {
     background: linear-gradient(135deg, white 0%, var(--accent-light) 100%);
     padding: 4rem 0 2rem;
     color: var(--text);
-}
-
-.footer h4, .footer h5 {
-    color: var(--primary);
-}
-
-.footer p {
-    color: var(--text);
-    opacity: 0.8;
-}
-
-.footer .social-links a {
-    color: var(--primary);
-    transition: color 0.3s ease;
-}
-
-.footer .social-links a:hover {
-    color: var(--secondary);
+    margin-top: auto;
 }
 
 .footer-links {
@@ -142,107 +144,68 @@ body {
     padding: 0;
 }
 
-.footer-links li {
-    margin-bottom: 1rem;
-}
-
-.footer-links a {
+.footer-links a,
+.footer-contact {
     color: var(--text);
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 2rem;
+    opacity: 0.8;
     transition: all 0.3s ease;
-    display: inline-block;
-    position: relative;
-    z-index: 1;
-}
-
-.footer-links a::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: var(--accent);
-    border-radius: 2rem;
-    transition: all 0.3s ease;
-    z-index: -1;
 }
 
 .footer-links a:hover {
     color: var(--primary);
-    transform: translateX(10px);
+    opacity: 1;
 }
 
-.footer-links a:hover::before {
-    width: 100%;
+/****************
+ * Admin Theme  *
+ ****************/
+
+/* Admin Cards */
+.admin-layout .card {
+    box-shadow: var(--shadow-sm);
 }
 
-.footer-contact i {
-    color: var(--primary);
-}
-
-.footer-contact span {
+.admin-layout .card-title {
     color: var(--text);
-    opacity: 0.8;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
 }
 
-.footer-contact li {
+.admin-layout .card-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 2.5rem;
+    background: var(--primary);
+    border-radius: 2px;
+}
+
+/* Admin Tables */
+.admin-layout .table {
+    margin-bottom: 0;
+}
+
+/* Admin Buttons */
+.admin-layout .btn-light {
+    background-color: var(--accent-light);
+    border: none;
+}
+
+.admin-layout .btn-light:hover {
+    background-color: var(--accent);
+}
+
+/* Admin Stats Cards */
+.admin-layout .stats-icon {
+    width: 3rem;
+    height: 3rem;
     display: flex;
     align-items: center;
-}
-
-.footer-contact li i {
-    font-size: 1.2rem;
-}
-
-.footer-contact li span {
-    font-size: 1rem;
-}
-
-.footer .text-center p {
-    color: var(--text);
-    opacity: 0.8;
-    margin-top: 2rem;
-}
-
-.social-links a:hover {
-    color: var(--secondary) !important;
-}
-
-.badge {
-    background-color: var(--secondary) !important;
-}
-
-/* About page styles */
-.about-hero-section {
-    background: linear-gradient(135deg, var(--accent-light) 0%, white 100%);
-    padding: 4rem 0;
-}
-
-.value-card {
-    background: white;
-    border-radius: 1rem;
-    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.08);
-    transition: all 0.3s ease;
-}
-
-.value-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 1rem 2rem rgba(0,0,0,0.12);
-}
-
-.mission-list {
-    list-style: none;
-    padding: 0;
-}
-
-.mission-list li {
-    font-size: 1.1rem;
-    color: var(--text);
-}
-
-.mission-list i {
-    font-size: 1.4rem;
+    justify-content: center;
+    border-radius: 50%;
 }
