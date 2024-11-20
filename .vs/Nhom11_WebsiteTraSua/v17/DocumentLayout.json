@@ -1,0 +1,93 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Homework\\LapTrinhWeb\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{457B34BF-0E96-4FF0-83BD-6E34308E728F}|WebsiteTraSua\\WebsiteTraSua.csproj|e:\\homework\\laptrinhweb\\websitetrasua\\views\\admin\\topping.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{457B34BF-0E96-4FF0-83BD-6E34308E728F}|WebsiteTraSua\\WebsiteTraSua.csproj|solutionrelative:websitetrasua\\views\\admin\\topping.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{457B34BF-0E96-4FF0-83BD-6E34308E728F}|WebsiteTraSua\\WebsiteTraSua.csproj|E:\\Homework\\LapTrinhWeb\\websitetrasua\\views\\admin\\sanpham.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{457B34BF-0E96-4FF0-83BD-6E34308E728F}|WebsiteTraSua\\WebsiteTraSua.csproj|solutionrelative:websitetrasua\\views\\admin\\sanpham.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{457B34BF-0E96-4FF0-83BD-6E34308E728F}|WebsiteTraSua\\WebsiteTraSua.csproj|E:\\Homework\\LapTrinhWeb\\websitetrasua\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{457B34BF-0E96-4FF0-83BD-6E34308E728F}|WebsiteTraSua\\WebsiteTraSua.csproj|solutionrelative:websitetrasua\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{457B34BF-0E96-4FF0-83BD-6E34308E728F}|WebsiteTraSua\\WebsiteTraSua.csproj|E:\\Homework\\LapTrinhWeb\\websitetrasua\\views\\admin\\trangchu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{457B34BF-0E96-4FF0-83BD-6E34308E728F}|WebsiteTraSua\\WebsiteTraSua.csproj|solutionrelative:websitetrasua\\views\\admin\\trangchu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SanPham.cshtml",
+              "DocumentMoniker": "E:\\Homework\\LapTrinhWeb\\WebsiteTraSua\\Views\\Admin\\SanPham.cshtml",
+              "RelativeDocumentMoniker": "WebsiteTraSua\\Views\\Admin\\SanPham.cshtml",
+              "ToolTip": "E:\\Homework\\LapTrinhWeb\\WebsiteTraSua\\Views\\Admin\\SanPham.cshtml",
+              "RelativeToolTip": "WebsiteTraSua\\Views\\Admin\\SanPham.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-16T14:55:47.114Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Topping.cshtml",
+              "DocumentMoniker": "E:\\Homework\\LapTrinhWeb\\WebsiteTraSua\\Views\\Admin\\Topping.cshtml",
+              "RelativeDocumentMoniker": "WebsiteTraSua\\Views\\Admin\\Topping.cshtml",
+              "ToolTip": "E:\\Homework\\LapTrinhWeb\\WebsiteTraSua\\Views\\Admin\\Topping.cshtml",
+              "RelativeToolTip": "WebsiteTraSua\\Views\\Admin\\Topping.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAACQAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-16T14:32:35.332Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TrangChu.cshtml",
+              "DocumentMoniker": "E:\\Homework\\LapTrinhWeb\\WebsiteTraSua\\Views\\Admin\\TrangChu.cshtml",
+              "RelativeDocumentMoniker": "WebsiteTraSua\\Views\\Admin\\TrangChu.cshtml",
+              "ToolTip": "E:\\Homework\\LapTrinhWeb\\WebsiteTraSua\\Views\\Admin\\TrangChu.cshtml",
+              "RelativeToolTip": "WebsiteTraSua\\Views\\Admin\\TrangChu.cshtml",
+              "ViewState": "AQIAAGMAAAAAAAAAAAAAAH4AAACBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-16T14:39:48.931Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "E:\\Homework\\LapTrinhWeb\\WebsiteTraSua\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "WebsiteTraSua\\Controllers\\AdminController.cs",
+              "ToolTip": "E:\\Homework\\LapTrinhWeb\\WebsiteTraSua\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "WebsiteTraSua\\Controllers\\AdminController.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAtwDYAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T09:16:49.368Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
