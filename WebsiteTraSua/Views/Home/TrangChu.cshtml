@@ -4,6 +4,7 @@
     Layout = "~/Views/Home/_Layout.cshtml";
     ViewBag.Title = "Trang Chủ";
 }
+@using WebsiteTraSua.Models;
 
 <!-- Hero Section -->
 <section class="hero-section py-5">
@@ -31,21 +32,21 @@
     <div class="container">
         <h2 class="text-center fw-bold mb-4" style="color: var(--primary)">Sản Phẩm Nổi Bật</h2>
         <div class="row g-4">
-            @foreach (var thucUong in new ThucUong[] {
-                new ThucUong {
-                    Ten = "Trà Sữa Truyền Thống",
+            @foreach (var thucUong in new SanPham[] {
+                new SanPham {
+                    TenSP = "Trà Sữa Truyền Thống",
                     Gia = 59000M,
                     HinhAnh = "tra-sua-truyen-thong.jpg",
                     MoTa = "Trà đen đặc trưng kết hợp với sữa tươi và trân châu mật ong",
                 },
-                new ThucUong {
-                    Ten = "Trà Sữa Khoai Môn",
+                new SanPham {
+                    TenSP = "Trà Sữa Khoai Môn",
                     Gia = 64000M,
                     HinhAnh = "tra-sua-khoai-mon.jpg",
                     MoTa = "Hỗn hợp khoai môn mịn màng với sữa dừa và trân châu gạo tím",
                 },
-                new ThucUong {
-                    Ten = "Trà Sữa Matcha",
+                new SanPham {
+                    TenSP = "Trà Sữa Matcha",
                     HinhAnh = "tra-sua-matcha.jpg",
                     Gia = 69000M,
                     MoTa = "Matcha Nhật Bản cao cấp với sữa yến mạch và trân châu đường nâu",
@@ -54,9 +55,9 @@
             {
                 <div class="col-md-4">
                     <div class="card h-100 shadow-sm rounded-4 border-0">
-                        <img src="~/Content/images/@thucUong.HinhAnh" class="card-img-top" alt="@thucUong.Ten">
+                        <img src="~/Content/images/@thucUong.HinhAnh" class="card-img-top" alt="@thucUong.TenSP">
                         <div class="card-body">
-                            <h3 class="h5 fw-bold" style="color: var(--primary)">@thucUong.Ten</h3>
+                            <h3 class="h5 fw-bold" style="color: var(--primary)">@thucUong.TenSP</h3>
                             <p class="text-secondary">@thucUong.MoTa</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <span class="h5 mb-0" style="color: var(--secondary)">

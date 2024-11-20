@@ -1,0 +1,54 @@
+@model WebsiteTraSua.Models.Topping
+
+@{
+    ViewBag.Title = "SuaTopping";
+    Layout = "~/Views/Admin/_Layout.cshtml";
+}
+
+<h2>SuaTopping</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Topping</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.MaTopping)
+
+        <div class="form-group">
+            Tên Topping
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TenTopping, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.TenTopping, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            Giá
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Gia, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Gia, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            Còn hàng
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ConHang, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ConHang, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Topping")
+</div>

@@ -1,4 +1,5 @@
 using System.Web.Mvc;
+using WebsiteTraSua.Models;
 
 namespace WebsiteTraSua.Controllers
 {
@@ -6,6 +7,8 @@ namespace WebsiteTraSua.Controllers
     {
         // GET: Home
         // GET: Home/TrangChu
+        static string strcon = "Data Source=.;Initial Catalog=QuanLiTraSua;User ID=sa;Password=123";
+        DatabaseDataContext db = new DatabaseDataContext(strcon);
         public ActionResult TrangChu()
         {
             return View();

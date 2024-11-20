@@ -1,0 +1,49 @@
+@model WebsiteTraSua.Models.Topping
+
+@{
+    ViewBag.Title = "XoaTopping";
+    Layout = "~/Views/Admin/_Layout.cshtml";
+}
+
+<h2>XoaTopping</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Topping</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Tên Topping
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenTopping)
+        </dd>
+
+        <dt>
+            Giá
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gia)
+        </dd>
+
+        <dt>
+            Còn hàng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConHang)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Topping")
+        </div>
+    }
+</div>
