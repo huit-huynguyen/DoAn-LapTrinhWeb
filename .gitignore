@@ -9,5 +9,6 @@ packages/*
 !packages/repositories.config
 
 # User-specific files.
+.vs
 *.suo
 *.user
